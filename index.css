@@ -139,10 +139,6 @@
     grid-template-columns: repeat(4, 1fr);
   }
   
-  #qrcode{
-    width: 15vw;
-  }
-
   @media (max-width: 1100px){
     .listaDeEpisodios{grid-template-columns: repeat(3,1fr);}
     #qrcode{ width: 10vw;}
