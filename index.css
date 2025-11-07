@@ -140,7 +140,7 @@
   }
   
   #qrcode{
-    width: 9vw;
+    width: 5vw;
   }
 
   @media (max-width: 1100px){
