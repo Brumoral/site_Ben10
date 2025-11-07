@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>Ben 10 | Início</title>
+  <meta name="description" content="Bem-vindo ao portal Ben 10: personagens, episódios, jogos e novidades." >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" >
+</head>
+
+<body>
+  <a class="pularProMeio" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecaoDoBen">
+    <div class="caixona barrigaDoCabecao">
+      <a class="logoDoBen" href="index.html" aria-label="Página inicial Ben 10">
+        <img src="images/img_logoBEN10.png" alt="Logo Ben 10" width="80" height="50" loading="eager" >
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="botaoAbreMenu" aria-label="Abrir menu" >
+      <label for="nav-toggle" class="tresRisquinhos" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="menuGrandao" aria-label="Principal">
+        <ul>
+          <li><a href="Personagens.html">Personagens</a></li>
+          <li><a href="#sagas">Sagas</a></li>
+          <li><a href="#novidades">Novidades</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="telaDoBen" role="banner">
+    <div class="caixona dentroDaTela">
+      <div class="falasDoBen">
+        <h1>Desbloqueie o Omnitrix</h1>
+        <p>Explore transformações, veja as sagas e descubra segredos do universo Ben 10.</p>
+        <div class="botoesDoBen">
+          <a class="botao botaoGrandao" href="Personagens.html">Ver transformações</a>
+          <a class="botao botaoFantasma" href="#sagas">Ver Sagas</a>
+        </div>
+      </div>
+      <picture class="desenhoDoBen">
+        <img src="images/img_BENeSEUSamigos.jpg" alt="Ben com o Omnitrix ativado" width="600" height="420"
+          loading="lazy" >
+      </picture>
+    </div>
+    <div class="quadradinhosDoBen" aria-hidden="true"></div>
+  </section>
+
+  <main id="conteudo">
+    <section id="personagens" class="parte caixona">
+      <header class="tituloGrandao">
+        <h2>Alienígenas</h2>
+        <p>Conheça cada forma alienígena do Omnitrix.</p>
+      </header>
+
+      <div class="gradeDeCartinhas">
+        <article class="cartinha">
+          <img src="images/img_CHAMA.png" alt="Chama em postura de combate" loading="lazy" >
+          <div class="textoDaCartinha">
+            <h3>Chama</h3>
+            <p>Manipula fogo e calor extremo. Ideal para combates intensos e iluminação.</p>
+            <a class="clicavel" href="#">Ver detalhes →</a>
+          </div>
+        </article>
+
+        <article class="cartinha">
+          <img src="images/img_QuatroBracos.png" alt="Quatro Braços mostrando força" loading="lazy" >
+          <div class="textoDaCartinha">
+            <h3>Quatro Braços</h3>
+            <p>Força colossal e resistência. Perfeito para situações de alto impacto.</p>
+            <a class="clicavel" href="#">Ver detalhes →</a>
+          </div>
+        </article>
+
+        <article class="cartinha">
+          <img src="images/img_XLR8.webp" alt="XLR8 em alta velocidade" loading="lazy" >
+          <div class="textoDaCartinha">
+            <h3>XLR8</h3>
+            <p>Velocidade supersônica e reflexos aprimorados para missões rápidas.</p>
+            <a class="clicavel" href="#">Ver detalhes →</a>
+          </div>
+        </article>
+
+        <article class="cartinha">
+          <img src="images/img_Diamante.webp" alt="Diamante com lâminas cristalinas" loading="lazy" >
+          <div class="textoDaCartinha">
+            <h3>Diamante</h3>
+            <p>Corpo cristalino quase indestrutível e poder de criação de lâminas.</p>
+            <a class="clicavel" href="#">Ver detalhes →</a>
+          </div>
+        </article>
+        <a href="Personagens.html">→ Ver todos os Aliens</a>
+      </div>
+    </section>
+
+    <section id="sagas" class="parte parteDiferente">
+      <div class="caixona">
+        <header class="tituloGrandao">
+          <h2>Sagas do Ben 10</h2>
+          <p>Explore cada fase da história e descubra como o herói evoluiu ao longo do tempo.</p>
+        </header>
+
+        <div class="listaDeEpisodios">
+          <article class="episodiozinho">
+            <div class="fotinhaDoEp">
+              <img src="images/Ben10Classico.jpg" alt="Ben 10 Clássico" loading="lazy" >
+              <span class="selinho">2005 - 2008</span>
+            </div>
+            <div class="textoDoEp">
+              <h3>Ben 10 Clássico</h3>
+              <p>Onde tudo começou: Ben encontra o Omnitrix e vive suas primeiras aventuras.</p>
+              <a class="botao botaoPequeno" href="ben10-classico.html">Ver história</a>
+            </div>
+          </article>
+
+          <article class="episodiozinho">
+            <div class="fotinhaDoEp">
+              <img src="images/Ben10ForçaAlieligina.jpg" alt="Ben 10 Força Alienígena" loading="lazy" >
+              <span class="selinho">2008 - 2010</span>
+            </div>
+            <div class="textoDoEp">
+              <h3>Força Alienígena</h3>
+              <p>Ben mais velho, novos alienígenas e ameaças ainda maiores.</p>
+              <a class="botao botaoPequeno" href="forca-alienigena.html">Ver história</a>
+            </div>
+          </article>
+
+          <article class="episodiozinho">
+            <div class="fotinhaDoEp">
+              <img src="images/Ben10SupremaciaAlien.webp" alt="Ben 10 Supremacia Alienígena" loading="lazy" >
+              <span class="selinho">2010 - 2012</span>
+            </div>
+            <div class="textoDoEp">
+              <h3>Supremacia Alienígena</h3>
+              <p>Transformações supremas e batalhas épicas contra vilões poderosos.</p>
+              <a class="botao botaoPequeno" href="supremacia-alienigena.html">Ver história</a>
+            </div>
+          </article>
+
+          <article class="episodiozinho">
+            <div class="fotinhaDoEp">
+              <img src="images/Ben10Omniverse.jpg" alt="Ben 10 Omniverse" loading="lazy" >
+              <span class="selinho">2012 - 2014</span>
+            </div>
+            <div class="textoDoEp">
+              <h3>Omniverse</h3>
+              <p>Um novo visual, novos parceiros e viagens por todo o multiverso.</p>
+              <a class="botao botaoPequeno" href="omniverse.html">Ver história</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background-color:var(--bg-2); font-family: 'Outfit',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif; color:#fff; padding:20px 0; text-align:center;">
+      <h2 style="margin:0; font-size:24px; color:#7CFC00;">Ben 10 Fan Site</h2>
+      <p style="margin:10px 0; font-size:14px;">
+        © 2025 Bruno Morales — Este é um projeto de fã, sem afiliação oficial à Cartoon Network.
+      </p>
+    </footer>
+</body>

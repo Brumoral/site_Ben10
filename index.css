@@ -1,0 +1,212 @@
+:root{
+    --bg:#0b0f0c;
+    --bg-2:#0f1511;
+    --card:#101912;
+    --text:#e6f3e8;
+    --muted:#a7c3ad;
+    --primary:#19e676;      /* verde omnitrix */
+    --primary-2:#0ac95f;
+    --accent:#1bd1b7;       /* leve ciano */
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --radius:14px;
+    --radius-sm:10px;
+    --container:1200px;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background: radial-gradient(1200px 600px at 70% -10%, rgba(25,230,118,.08), transparent 60%) , var(--bg);
+    color:var(--text);
+    font-family:"Outfit",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.6;
+  }
+  
+  img{max-width:100%;display:block}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{color:var(--primary-2)}
+  .caixona{max-width:var(--container);margin-inline:auto;padding:0 20px}
+  
+  .pularProMeio{
+    position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+  }
+  .pularProMeio:focus{left:16px;top:16px;width:auto;height:auto;background:#000;padding:10px 14px;border-radius:8px;color:#fff;z-index:9999}
+  
+  .cabecaoDoBen{
+    position:sticky;top:0;z-index:1000;
+    backdrop-filter:saturate(120%) blur(8px);
+    background: color-mix(in oklab, var(--bg), transparent 40%);
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .barrigaDoCabecao{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+  .logoDoBen img{display:block}
+  
+  .botaoAbreMenu{display:none}
+  .tresRisquinhos{
+    width:40px;height:40px;border-radius:10px;display:none;align-items:center;justify-content:center;cursor:pointer;
+  }
+  .tresRisquinhos span{display:block;width:22px;height:2px;background:#d5f6de;margin:3px 0;transition:.2s}
+  .menuGrandao ul{display:flex;gap:22px;list-style:none;padding:0;margin:0}
+  .menuGrandao a{display:inline-block;padding:10px 6px;border-radius:8px;color:#d5f6de}
+  .menuGrandao a:hover{background:rgba(255,255,255,.06);color:#fff}
+  
+  @media (max-width: 860px){
+    .tresRisquinhos{display:flex}
+    .menuGrandao{position:absolute;inset-inline:0;top:64px;background:var(--bg-2);border-bottom:1px solid rgba(255,255,255,.06);transform:translateY(-120%);transition:.25s}
+    .menuGrandao ul{flex-direction:column;padding:10px}
+    .botaoAbreMenu:checked ~ .menuGrandao{transform:translateY(0)}
+    .botaoAbreMenu:checked + .tresRisquinhos span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+    .botaoAbreMenu:checked + .tresRisquinhos span:nth-child(2){opacity:0}
+    .botaoAbreMenu:checked + .tresRisquinhos span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+  }
+  
+  .telaDoBen{
+    position:relative;
+    isolation:isolate;
+    padding: clamp(40px, 6vw, 80px);
+    background:
+      radial-gradient(500px 400px at 15% 10%, rgba(27,209,183,.18), transparent 60%),
+      linear-gradient(180deg, rgba(12,18,14,.0), rgba(12,18,14,.5) 60%, rgba(12,18,14,1));
+  }
+  .dentroDaTela{display:grid;grid-template-columns: 0.4fr .6fr;gap:100px;align-items:center}
+  .falasDoBen h1{font-size:clamp(28px, 5vw, 56px);line-height:1.1;margin:0 0 12px;font-weight:800}
+  .falasDoBen p{color:var(--muted);margin:0 0 22px}
+  .botoesDoBen{display:flex;gap:12px;flex-wrap:wrap}
+  .botao{
+    --b:2px;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 18px;border-radius:12px;border:var(--b) solid transparent;
+    font-weight:700;letter-spacing:.2px;cursor:pointer;transition:.18s;
+  }
+  .botaoPequeno{padding:8px 12px;border-radius:10px;font-weight:600}
+  .botaoGrandao{background:linear-gradient(180deg, var(--primary), var(--primary-2));color:#023315;box-shadow:0 8px 20px rgba(25,230,118,.25)}
+  .botaoGrandao:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(25,230,118,.35)}
+  .botaoFantasma{border-color:rgba(255,255,255,.18);color:#eafff1;background:rgba(255,255,255,.04)}
+  .botaoFantasma:hover{background:rgba(255,255,255,.08)}
+  
+  .desenhoDoBen img{filter: drop-shadow(0 18px 40px rgba(0,0,0,.45));
+  border-radius: 40px;}
+  .quadradinhosDoBen{
+    position:absolute;inset:0;z-index:-1;
+    background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(700px 500px at 70% 10%, #000 30%, transparent 70%);
+  }
+  
+  @media (max-width: 960px){
+    .dentroDaTela{grid-template-columns:1fr}
+    .desenhoDoBen{order:-1}
+  }
+  
+  .parte{padding: clamp(40px, 6vw, 80px) 0}
+  .parteDiferente{background: linear-gradient(180deg, var(--bg-2), #0c130e)}
+  .tituloGrandao h2{font-size:clamp(22px, 3.2vw, 32px);margin:0 0 6px}
+  .tituloGrandao p{color:var(--muted);margin:0}
+  
+  .gradeDeCartinhas{
+    margin-top:26px;
+    display:grid;gap:30px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 1100px){
+    #personagens {padding: 5%;}
+    .gradeDeCartinhas{grid-template-columns: repeat(3,1fr); width: 80%;}
+  }
+  @media (max-width: 780px){.gradeDeCartinhas{grid-template-columns: repeat(2,1fr)}}
+  @media (max-width: 520px){.gradeDeCartinhas{grid-template-columns: 1fr; margin: 0 auto;}}
+  
+  .cartinha{
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.2s transform,.2s box-shadow;
+  }
+  .cartinha:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+  .cartinha img{aspect-ratio: 10/10;object-fit:cover;}
+  .textoDaCartinha{padding:16px}
+  .textoDaCartinha h3{margin:0 0 6px}
+  .textoDaCartinha p{margin:0 0 10px;color:var(--muted)}
+  .clicavel{font-weight:600}
+  
+.listaDeEpisodios{
+    display:grid;
+    gap:24px;
+    margin-top:32px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  @media (max-width: 1100px){
+    .listaDeEpisodios{grid-template-columns: repeat(3,1fr);}
+  }
+  @media (max-width: 780px){
+    .listaDeEpisodios{grid-template-columns: repeat(2,1fr);}
+  }
+  @media (max-width: 520px){
+    .listaDeEpisodios{grid-template-columns: 1fr;}
+  }
+  
+  .episodiozinho{
+    display:flex;
+    flex-direction:column;
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.25s transform, .25s box-shadow;
+  }
+  
+  .episodiozinho:hover{
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:0 16px 40px rgba(0,0,0,.4);
+  }
+  
+  .fotinhaDoEp{
+    position:relative;
+  }
+  
+  .fotinhaDoEp img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+  }
+  
+  .selinho{
+    position:absolute;
+    left:10px;
+    top:10px;
+    background: #072;
+    color:#c9ffdf;
+    border:1px solid rgba(25,230,118,.5);
+    padding:4px 8px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.3px;
+  }
+  
+  .textoDoEp{
+    padding:16px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  
+  .textoDoEp h3{
+    margin:0 0 8px;
+    font-size:1.1rem;
+  }
+  
+  .textoDoEp p{
+    margin:0 0 14px;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+  
+  .textoDoEp .botaoPequeno{
+    align-self:flex-start;
+  }
