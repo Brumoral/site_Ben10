@@ -155,7 +155,6 @@
   @media (max-width: 520px){
     .listaDeEpisodios{grid-template-columns: 1fr;}
     #qrcode { width: 10vw;}
-
   }
   
   .episodiozinho{
