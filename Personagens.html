@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,6 @@
                 <ul>
                     <li><a href="Personagens.html">Personagens</a></li>
                     <li><a href="#sagas">Sagas</a></li>
-                    <li><a href="#novidades">Novidades</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +38,7 @@
             </header>
 
             <div class="gradeDeCartinhas">
-                <article class="cartinha" onclick="window.location.href='aliensClassico.html';">
+                <article class="cartinha" onclick="if(!event.target.closest('a')) window.location.href='aliensClassico.html';">
                     <img src="images/img_OmnitrixClassico.webp" alt="foto" loading="lazy">
                     <div class="textoDaCartinha">
                         <h3>Clássico</h3>
@@ -47,28 +46,22 @@
                     </div>
                 </article>
 
-                <article class="cartinha" onclick="window.location.href='aliensForcaAlienigina.html';">
+                <article class="cartinha" onclick="if(!event.target.closest('a')) window.location.href='aliensForcaAlienigina.html';">
                     <img src="images/img_OmnitrixForcaAlien.webp" alt="foto" loading="lazy">
-                    <p><a href=""></a>
-                    </p>
                     <div class="textoDaCartinha">
                         <h3>Força Alien</h3>
                         <a class="clicavel" href="#">Ver detalhes →</a>
                     </div>
                 </article>
-                <article class="cartinha">
+                <article class="cartinha" onclick="if(!event.target.closest('a')) window.location.href='aliensSupremaciaAlienigena.html';">
                     <img src="images/img_OmnitrixSupremaciaAlien.png" alt="foto" loading="lazy">
-                    <p><a href=""></a>
-                    </p>
                     <div class="textoDaCartinha">
                         <h3>Supremacia Alien</h3>
                         <a class="clicavel" href="#">Ver detalhes →</a>
                     </div>
                 </article>
-                <article class="cartinha">
+                <article class="cartinha" onclick="if(!event.target.closest('a')) window.location.href='aliensOmniverse.html';">
                     <img src="images/img_OmnitrixOmniverse.png" alt="foto" loading="lazy">
-                    <p><a href=""></a>
-                    </p>
                     <div class="textoDaCartinha">
                         <h3>Omniverse</h3>
                         <a class="clicavel" href="#">Ver detalhes →</a>

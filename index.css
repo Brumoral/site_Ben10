@@ -24,7 +24,7 @@
   }
   
   img{max-width:100%;display:block}
-  a{color:var(--primary);text-decoration:none}
+  a{color:var(--primary);text-decoration:none;}
   a:hover{color:var(--primary-2)}
   .caixona{max-width:var(--container);margin-inline:auto;padding:0 20px}
   
@@ -42,9 +42,21 @@
   .barrigaDoCabecao{display:flex;align-items:center;justify-content:space-between;min-height:64px}
   .logoDoBen img{display:block}
   
-  .botaoAbreMenu{display:none}
+
+  .botaoAbreMenu{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
   .tresRisquinhos{
-    width:40px;height:40px;border-radius:10px;display:none;align-items:center;justify-content:center;cursor:pointer;
+    width:40px;height:40px;border-radius:10px;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:1101;
   }
   .tresRisquinhos span{display:block;width:22px;height:2px;background:#d5f6de;margin:3px 0;transition:.2s}
   .menuGrandao ul{display:flex;gap:22px;list-style:none;padding:0;margin:0}
@@ -53,9 +65,27 @@
   
   @media (max-width: 860px){
     .tresRisquinhos{display:flex}
-    .menuGrandao{position:absolute;inset-inline:0;top:64px;background:var(--bg-2);border-bottom:1px solid rgba(255,255,255,.06);transform:translateY(-120%);transition:.25s}
+    /* mobile: hide the nav off-screen AND make it non-interactive until toggled */
+    .menuGrandao{
+      position:absolute;
+      inset-inline:0;
+      top:64px;
+      background:var(--bg-2);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      transform:translateY(-120%);
+      transition:transform .25s ease, opacity .2s ease;
+      visibility:hidden;
+      opacity:0;
+      pointer-events:none;
+      z-index:1100;
+    }
     .menuGrandao ul{flex-direction:column;padding:10px}
-    .botaoAbreMenu:checked ~ .menuGrandao{transform:translateY(0)}
+    .botaoAbreMenu:checked ~ .menuGrandao{
+      transform:translateY(0);
+      visibility:visible;
+      opacity:1;
+      pointer-events:auto;
+    }
     .botaoAbreMenu:checked + .tresRisquinhos span:nth-child(1){transform:translateY(5px) rotate(45deg)}
     .botaoAbreMenu:checked + .tresRisquinhos span:nth-child(2){opacity:0}
     .botaoAbreMenu:checked + .tresRisquinhos span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
