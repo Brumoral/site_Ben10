@@ -121,6 +121,7 @@
     background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
     border:1px solid rgba(255,255,255,.08);
     border-radius:var(--radius);
+    margin-top: 20px ;
     overflow:hidden;
     box-shadow:var(--shadow);
     transition:.2s transform,.2s box-shadow;
