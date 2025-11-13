@@ -65,7 +65,6 @@
   
   @media (max-width: 860px){
     .tresRisquinhos{display:flex}
-    /* mobile: hide the nav off-screen AND make it non-interactive until toggled */
     .menuGrandao{
       position:absolute;
       inset-inline:0;
